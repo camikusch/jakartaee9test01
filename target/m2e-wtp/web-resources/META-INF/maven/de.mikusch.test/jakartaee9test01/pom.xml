@@ -19,6 +19,28 @@
 			<version>9.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>jakarta.json.bind</groupId> -->
+<!-- 			<artifactId>jakarta.json.bind-api</artifactId> -->
+<!-- 			<version>2.0.0</version> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>jakarta.json</groupId> -->
+<!-- 			<artifactId>jakarta.json-api</artifactId> -->
+<!-- 			<version>2.0.1</version> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+ 
+<!-- 		<dependency> -->
+<!-- 			<groupId>jakarta.xml.bind</groupId> -->
+<!-- 			<artifactId>jakarta.xml.bind-api</artifactId> -->
+<!-- 			<version>3.0.1</version> -->
+<!-- 			<scope>compile</scope> -->
+<!-- 		</dependency> -->
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -29,10 +51,11 @@
 				<configuration>
 					<server>local-tomee9-deploy</server>
 					<url>http://localhost:8080/manager/text</url>
+					<update>true</update>
 					<!-- <path>/app</path> -->
 				</configuration>
 			</plugin>
 		</plugins>
-<!-- 		<finalName>XAXA</finalName> -->
+		<!-- <finalName>XAXA</finalName> -->
 	</build>
 </project>
