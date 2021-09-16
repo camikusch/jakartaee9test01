@@ -27,7 +27,6 @@ public class PersonResource {
 			      .status(Response.Status.OK)
 			      .entity(new Person("person1", 49))
 			      .build();
-
 	}
 	
 	@GET
@@ -38,6 +37,13 @@ public class PersonResource {
 			      .status(Response.Status.OK)
 			      .entity(new Person("person2", 49))
 			      .build();
-
+	}
+	
+	@GET
+	@Path("/3")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getPerson3() {
+		Person p = new Person("person3", 49);
+		return p.toString();
 	}
 }

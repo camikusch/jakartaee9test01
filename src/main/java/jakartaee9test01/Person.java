@@ -1,7 +1,8 @@
 package jakartaee9test01;
 
-import jakarta.json.bind.annotation.JsonbProperty;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Person {
 
 	private String name;
@@ -31,6 +32,9 @@ public class Person {
 		this.age = age;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "name:"+name+" age:"+age;
+	}
 	
 }
