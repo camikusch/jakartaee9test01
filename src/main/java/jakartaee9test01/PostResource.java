@@ -25,7 +25,6 @@ public class PostResource {
 	@Produces(MediaType.APPLICATION_XML)
 	public Response sendPost0() {
 		return Response.status(Response.Status.OK).entity(new Post()).build();
-
 	}
 
 	@POST

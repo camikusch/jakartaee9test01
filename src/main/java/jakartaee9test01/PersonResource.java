@@ -1,5 +1,7 @@
 package jakartaee9test01;
 
+import com.fasterxml.jackson.jakarta.rs.yaml.YAMLMediaTypes;
+
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
@@ -31,7 +33,7 @@ public class PersonResource {
 	
 	@GET
 	@Path("/2")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(YAMLMediaTypes.APPLICATION_JACKSON_YAML)
 	public Response getPerson2() {
 		return Response
 			      .status(Response.Status.OK)
