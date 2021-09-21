@@ -1,0 +1,100 @@
+openapi: 3.0.1
+paths:
+  /hello/count:
+    get:
+      operationId: countUp
+      responses:
+        default:
+          description: default response
+          content:
+            text/plain:
+              schema:
+                type: string
+  /hello/{name}:
+    get:
+      operationId: doGreeting
+      parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: language
+        in: query
+        schema:
+          type: string
+      responses:
+        default:
+          description: default response
+          content:
+            text/plain:
+              schema:
+                type: string
+  /hello:
+    get:
+      operationId: sayHello
+      responses:
+        default:
+          description: default response
+          content:
+            text/plain:
+              schema:
+                type: string
+  /person/0:
+    get:
+      operationId: getPerson0
+      responses:
+        default:
+          description: default response
+          content:
+            application/xml: {}
+  /person/1:
+    get:
+      operationId: getPerson1
+      responses:
+        default:
+          description: default response
+          content:
+            application/json: {}
+  /person/2:
+    get:
+      operationId: getPerson2
+      responses:
+        default:
+          description: default response
+          content:
+            application/yaml: {}
+  /person/3:
+    get:
+      operationId: getPerson3
+      responses:
+        default:
+          description: default response
+          content:
+            text/plain:
+              schema:
+                type: string
+  /post/0:
+    post:
+      operationId: sendPost0
+      responses:
+        default:
+          description: default response
+          content:
+            application/xml: {}
+  /post/1:
+    post:
+      operationId: sendPost1
+      responses:
+        default:
+          description: default response
+          content:
+            application/json: {}
+  /post/2:
+    get:
+      operationId: sendPost2
+      responses:
+        default:
+          description: default response
+          content:
+            application/octet-stream: {}
